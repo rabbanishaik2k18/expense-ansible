@@ -1,6 +1,6 @@
 - name: configuration mysql
   hosts: mysql
-  bacome: yes
+  become: yes
   task: 
   - name: install mysql server
     ansible.builtin.package:
