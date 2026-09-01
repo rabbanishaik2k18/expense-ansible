@@ -1,0 +1,4 @@
+- name: disable nodejs
+  ansible.builtin.package:
+    name: nodejs
+    state: absent
