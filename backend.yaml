@@ -47,7 +47,7 @@
       dest: /etc/systemd/system/backend.service
     
   - name: improt mysql database
-    ansible.mysql.mysql_db:
+    community.mysql.mysql_db:
       state: import
       name: all
       target: /app/schema/backend.sql
