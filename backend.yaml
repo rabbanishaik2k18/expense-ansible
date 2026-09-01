@@ -1,4 +1,8 @@
-- name: disable nodejs
-  ansible.builtin.package:
-    name: nodejs
-    state: absent
+- name: configure backend
+  hosts: backend
+  become: yes
+  tesks:
+  - name: disable nodejs
+    ansible.builtin.package:
+      name: nodejs
+      state: absent
