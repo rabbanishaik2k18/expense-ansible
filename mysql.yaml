@@ -9,8 +9,8 @@
   - name: install libraries
     ansible.builtin.pip:
       name: PyMySQL
-      state: installed
-
+      executable: pip3.9
+      
   - name: start and enable service
     ansible.builtin.service:
       name: mysqld
