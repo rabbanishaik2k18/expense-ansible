@@ -14,7 +14,7 @@
       enabled: yes
 
   - name: Set root user password
-    ansible.mysql.mysql_info:
+    community.mysql.mysql_info:
       login_user: root
       login_password: ExpenseApp@1
       login_host: database.awsdevsecops.online
