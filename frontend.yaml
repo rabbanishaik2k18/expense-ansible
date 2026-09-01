@@ -22,7 +22,7 @@
   - name: create a directroy
     ansible.builtin.file:
       path: /usr/share/nginx/html
-      state: file
+      state: directory
 
   - name: download file
     ansible.builtin.get_url:
