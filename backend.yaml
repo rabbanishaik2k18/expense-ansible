@@ -1,7 +1,7 @@
 - name: configure backend
   hosts: backend
   become: yes
-  tesks:
+  tasks:
   - name: disable nodejs
     ansible.builtin.package:
       name: nodejs
