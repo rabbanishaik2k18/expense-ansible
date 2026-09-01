@@ -23,7 +23,7 @@
       login_password: ExpenseApp@1
       login_host: database.awsdevsecops.online
     register: mysql_result
-    ignoring_errors: true
+    ignore_errors: true
 
   - name: print mysql result
     ansible.builtin.debug:
