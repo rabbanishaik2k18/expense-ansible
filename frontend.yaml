@@ -6,11 +6,13 @@
     ansible.builtin.package:
       name: nginx
       state: present
-  - name: install nginx
+
+  - name: service start
     ansible.builtin.service:
       name: ngnix
       state: started
       enabled: yes
+
   - name: remove file
     ansible.builtin.file:
       path: /usr/share/nginx/html
