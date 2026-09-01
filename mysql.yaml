@@ -10,7 +10,7 @@
     ansible.builtin.pip:
       name: PyMySQL
       executable: pip3.9
-      
+
   - name: start and enable service
     ansible.builtin.service:
       name: mysqld
@@ -24,6 +24,7 @@
       login_host: database.awsdevsecops.online
     register: mysql_result
 
-
-
+  - name: print mysql result
+    ansible.builtin.debug:
+      msg: "mysql info: {{ mysql_result }}"
     
