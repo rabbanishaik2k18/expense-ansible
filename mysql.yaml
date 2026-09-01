@@ -1,25 +1,15 @@
-- name: configuration mysql
+- name: mysql server configuration
   hosts: mysql
   become: yes
-  tasks: 
+  tasks:
   - name: install mysql server
     ansible.builtin.package:
       name: mysql-server
       state: installed
 
-  - name: start service
+  - name: start and enable service
     ansible.builtin.service:
       name: mysqld
       state: started
       enabled: yes
-
-  - name: setup root password
-    ansible.mysql.mysql_info:
-      login_user: root
-      login_password: ExpenseApp@1
-      login_host: database.awsdevsecops.online
-    register: mysql_info
     
-  - name: print mysql info
-    ansible.builtin.debug:
-      msg: "{{ mysql_info }}"
